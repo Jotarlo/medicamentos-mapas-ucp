@@ -5,3 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         outDuration: 100
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+  });

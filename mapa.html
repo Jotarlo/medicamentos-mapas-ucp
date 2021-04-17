@@ -8,6 +8,7 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="recursos/materialize/css/materialize.min.css"
     media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="recursos/css/mapa.css" />
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,37 +36,11 @@
 
   <!-- Inicio Contenido -->
   <div class="container">
+    Mapa
+    <div id="map">
 
-
-    <div class="row">
-      <div class="input-field col s4">
-        <input id="first_name" type="text" class="validate" onkeyup="FiltroPorExpediente(this.value)">
-        <label for="first_name">Expediente</label>
-      </div>
-      <div class="input-field col s4">
-        <input id="first_name" type="text" class="validate" onkeyup="FiltroPorProducto(this.value)">
-        <label for="first_name">Producto</label>
-      </div>
-      <div class="input-field col s4">
-        <input id="first_name" type="text" class="validate" onkeyup="FiltroAdministracion(this.value)">
-        <label for="first_name">Vía de Administración</label>
-      </div>
     </div>
 
-    <table class="responsive-table table">
-      <thead>
-        <tr>
-          <th>Expediente</th>
-          <th>Producto</th>
-          <th>Titular</th>
-          <th>Fecha de Vencimiento</th>
-          <th>Vía de Administración</th>
-          <th>Detalles</th>
-        </tr>
-      </thead>
-      <tbody id="contenidoTablaMedicamentos">
-      </tbody>
-    </table>
   </div>
   <!-- Fin Contenido -->
 
@@ -111,8 +86,12 @@
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="recursos/materialize/js/materialize.min.js"></script>
-  <script type="text/javascript" src="recursos/js/tabla.js"></script>
+  <script type="text/javascript" src="recursos/js/mapa.js"></script>
   <script type="text/javascript" src="recursos/js/inicializacionMaterialize.js"></script>
+  
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG0GKctL9HFcsp5huNUh7VMVDcsIynCRk&callback=initMap&libraries=&v=weekly"
+      async></script>
 </body>
 
 </html>
